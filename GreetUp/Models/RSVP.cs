@@ -13,7 +13,9 @@ namespace GreetUp.Models
         public int ID { get; set; }
         public string Name { get; set; }
         public bool Response { get; set; }
+        [Display(Name = "Number of Guests")]
         public int GuestNum { get; set; }
+        [Display(Name = "Email Address")]
         public string Email { get; set; }
             
         [ForeignKey ("CodeEvent") ]
