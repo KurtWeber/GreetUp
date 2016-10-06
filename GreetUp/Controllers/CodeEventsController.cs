@@ -14,12 +14,14 @@ namespace GreetUp.Controllers
     {
         private GreetUpContext db = new GreetUpContext();
 
+        
         // GET: CodeEvents
         public ActionResult Index()
         {
             return View(db.CodeEvents.ToList());
-        }
-
+        } 
+       
+                    
         // GET: CodeEvents/Details/5
         public ActionResult Details(int? id)
         {

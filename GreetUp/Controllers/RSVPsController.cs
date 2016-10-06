@@ -15,10 +15,15 @@ namespace GreetUp.Controllers
         private GreetUpContext db = new GreetUpContext();
 
         // GET: RSVPs
-        public ActionResult Index()
+       /* public ActionResult Index()
         {
             var rSVPs = db.RSVPs.Include(r => r.CodeEvent);
             return View(rSVPs.ToList());
+        }*/
+
+        public ActionResult Index(string sortOrder)
+        {
+            return View(db.RSVPs.Include(r => r.CodeEvent));
         }
 
         // GET: RSVPs/Details/5
